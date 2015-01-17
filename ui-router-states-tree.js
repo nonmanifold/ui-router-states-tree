@@ -38,7 +38,8 @@
             var isLast = currPath.length === path.length;
             if (isLast) {
                 //add state at current level:
-                node.push(state);
+                var copiedState=angular.copy(state);
+                node.push(copiedState);
             } else {
                 //next path part lays deeper
                 var currPathStr = currPath.join('.');
